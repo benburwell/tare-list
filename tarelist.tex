@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage[letterpaper, margin=0.5in]{geometry}
+\usepackage{booktabs}
+
+\title{Tare List}
+\date{}
+\author{}
+
+\newenvironment{containertype}[1]{
+    \begin{table}[b]
+    \centering
+        \begin{tabular}{p{0.3\textwidth}p{0.1\textwidth}}
+    \toprule
+    \textbf{ #1 } & Weight (g) \\
+    \midrule
+}{
+    \bottomrule
+    \end{tabular}
+    \end{table}
+}
+
+\begin{document}
+
+    \newcommand{\containeritem}[2]{ #1 & #2 \\ }
+
+    \twocolumn[
+        \maketitle
+    ]
+
+    \begin{containertype}{Silver Bowls}
+        \containeritem{\#1 (Large)}{372}
+        \containeritem{\#2}{260}
+        \containeritem{\#3}{215}
+        \containeritem{\#4}{198}
+        \containeritem{\#5}{128}
+        \containeritem{\#6 (Small)}{79}
+    \end{containertype}
+
+    \begin{containertype}{Lettuce Spinner}
+        \containeritem{Basket}{172}
+        \containeritem{Bowl}{421}
+    \end{containertype}
+
+    \begin{containertype}{Monkey Dishes}
+        \containeritem{Glass Bowl}{166}
+    \end{containertype}
+
+    \begin{containertype}{Colanders}
+        \containeritem{Yellow}{163}
+        \containeritem{Green}{83}
+    \end{containertype}
+
+    \begin{containertype}{Measuring Containers}
+        \containeritem{Cuisinart 500mL}{100}
+        \containeritem{OXO 500mL}{118}
+        \containeritem{Pyrex 2c}{589}
+        \containeritem{Pyrex 1L}{797}
+    \end{containertype}
+
+    \begin{containertype}{Pots and Pans}
+        \containeritem{Glass pot}{857}
+        \containeritem{8 inch skillet}{319}
+        \containeritem{10 inch skillet}{543}
+        \containeritem{Grill pan}{1099}
+        \containeritem{Wok}{1209}
+    \end{containertype}
+
+\end{document}
