@@ -3,9 +3,10 @@
 \usepackage{booktabs}
 \usepackage{multicol}
 \usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage[yyyymmdd]{datetime}
 
-\pagestyle{empty}
-
+% define macro and environment for container types
 \newenvironment{containertype}[1]{
     \begin{wraptable}{l}{0.5\textwidth}
         \centering
@@ -20,6 +21,13 @@
 }
 
 \newcommand{\containeritem}[2]{ #1 & #2 \\ }
+
+% set up the page footer
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyfoot[R]{\today}
+\renewcommand{\dateseparator}{-}
 
 \begin{document}
     \begin{multicols}{2}[]
